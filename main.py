@@ -2,9 +2,11 @@ import pygame
 import sys
 import numpy as np
 from PIL import Image
+import os
 
 from pygame.locals import *
 
+os.chdir('python-wfc')
 input = pygame.image.load('input.png')
 
 
@@ -14,6 +16,8 @@ class Tile(pygame.sprite.Sprite):
 
         self.surf = input
         self.rect = self.surf.get_rect()
+
+        self.wavefunction = {}
 
 
 pygame.init()
